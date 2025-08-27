@@ -1,0 +1,28 @@
+# Site settings
+title: App Name
+description: App Description
+url: "https://app.blaze.design"
+keywords: "none, none"
+baseurl: ""
+version: 1.1
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  experiences:
+    output: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-redirect-from 
