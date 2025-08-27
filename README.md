@@ -1,1 +1,1 @@
-# app setup
+# app.blaze.design
