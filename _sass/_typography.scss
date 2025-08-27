@@ -62,15 +62,15 @@ a {
         color: white;
         padding: 1rem 2rem;
         border-radius: 999px;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
     }
 
     &.button:hover,
     &.button:focus,
     &.button:active {
         background: var(--secondary-color);
+        transform: scale(1.01) translateY(-2px);
+        box-shadow: 0 0 1rem 0 var(--primary-color-soft);
     }
 }

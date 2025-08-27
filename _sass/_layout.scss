@@ -1,12 +1,20 @@
 // Body and main layout
 html {
     overflow: hidden;
+
+    @media (max-height: 380px) {
+        overflow: auto;
+    }
 }
 
 body {
     overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
+
+    @media (max-height: 380px) {
+        overflow: auto;
+    }
 }
 
 main {
@@ -16,6 +24,10 @@ main {
     width: 100%;
     min-height: 100vh;
     position: relative;
+
+    @media (max-height: 380px) {
+        min-height: auto;
+    }
 
     &:before {
         content: "";
@@ -72,9 +84,15 @@ main {
     }
 
     @media (max-width: 600px) {
-        width: 130vh;
-        height: 130vh;
+        width: 80vh;
+        height: 80vh;
         top: 30%;
+    }
+
+    @media (max-height: 380px) {
+        width: 200vh;
+        height: 200vh;
+        top: 10%;
     }
 
     img {
@@ -111,13 +129,14 @@ section {
         0 -1rem 3rem 0 var(--primary-color);
     animation: fade-in 0.4s ease-in-out;
 
-    &:hover {
-        padding-bottom: 4rem;
-    }
-
     @media (max-width: 600px) {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    @media (max-height: 380px) {
+        position: relative;
+        margin-top: 60vh;
     }
 
     aside {
